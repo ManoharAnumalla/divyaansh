@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Divyaansh Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Open Sans"', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#ef4444',
+                        light: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans text-gray-800 bg-light flex flex-col min-h-screen">
+    
+    <!-- Top Bar -->
+    <div class="bg-primary text-white text-sm py-2 px-4">
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2 text-gray-200">
+                <i class="fa-solid fa-location-dot text-secondary"></i>
+                <span>Rampally, Hyderabad</span>
+            </div>
+            <div class="flex items-center space-x-6 mt-2 sm:mt-0 text-gray-200">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-phone text-secondary"></i>
+                    <a href="tel:9876543210" class="hover:text-white transition-colors">9876543210</a>
+                </div>
+                <div class="flex space-x-3 border-l border-gray-500 pl-6">
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="bg-primary w-10 h-10 rounded-full flex items-center justify-center text-white">
+                    <i class="fa-solid fa-plus text-xl"></i>
+                </div>
+                <span class="font-heading font-bold text-2xl text-primary">Divyaansh<span class="text-secondary font-normal"> Hospital</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 font-heading font-medium text-gray-700">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="services.html" class="hover:text-primary transition-colors">Services</a>
+                <a href="about.html" class="text-primary border-b-2 border-primary pb-1">About Us</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <a href="tel:9876543210" class="bg-accent hover:bg-red-700 text-white px-6 py-2.5 rounded-full shadow-md transition-all duration-300 flex items-center transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-phone-volume mr-2 animate-pulse"></i>Emergency
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-full bg-white shadow-xl border-t border-gray-100 flex-col px-6 py-6 space-y-4 text-xl font-heading z-40">
+            <a href="index.html" class="text-gray-700 hover:text-primary border-b pb-2">Home</a>
+            <a href="services.html" class="text-gray-700 hover:text-primary border-b pb-2">Services</a>
+            <a href="about.html" class="text-primary font-semibold border-b pb-2">About Us</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary border-b pb-2">Contact</a>
+            <a href="tel:9876543210" class="bg-accent text-white px-6 py-3 rounded-full text-center mt-2 flex justify-center items-center">
+                <i class="fa-solid fa-phone-volume mr-2"></i>Emergency Call
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Page Header -->
+        <div class="bg-primary pt-20 pb-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-900/80 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="About Us" class="absolute inset-0 w-full h-full object-cover z-0">
+            <div class="container mx-auto px-4 relative z-20 text-center animate-fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">About Divyaansh Hospital</h1>
+                <div class="flex items-center justify-center space-x-2 text-blue-200">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <span><i class="fa-solid fa-chevron-right text-xs"></i></span>
+                    <span class="text-white">About Us</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Content Section -->
+        <section class="py-20">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 relative group">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hospital Building" class="rounded-2xl shadow-2xl relative z-10 transition-transform duration-500 group-hover:scale-105">
+                        <div class="absolute -bottom-6 -right-6 w-full h-full bg-secondary/20 rounded-2xl z-0"></div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-secondary font-semibold tracking-wider uppercase text-sm mb-2">Our Story</h2>
+                        <h3 class="font-heading text-3xl md:text-4xl font-bold text-primary mb-6">A Legacy of Medical Excellence and Compassion</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">Divyaansh Hospital was founded with a single, clear vision: to provide world-class healthcare that is both accessible and deeply compassionate. Over our two decades of service, we have grown into a multidisciplinary center of excellence serving thousands of families in the region.</p>
+                        <p class="text-gray-600 mb-8 leading-relaxed">Our hospital is equipped with state-of-the-art medical technology and is staffed by a remarkable team of dedicated doctors, nurses, and support staff. It's not just about treating diseases; it's about holistically healing the patient.</p>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center mr-4 shrink-0">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-primary mb-1">Modern Equipment</h4>
+                                    <p class="text-sm text-gray-500">The latest in medical technology for accurate diagnoses.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 rounded-full bg-blue-50 text-secondary flex items-center justify-center mr-4 shrink-0">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-heading font-semibold text-primary mb-1">Expert Specialists</h4>
+                                    <p class="text-sm text-gray-500">A team of renowned medical professionals.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision and Mission -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 service-card">
+                        <div class="w-16 h-16 rounded-full bg-blue-50 text-secondary text-3xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-primary mb-4">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">To be the most trusted healthcare partner for our community, renowned for our clinical excellence, compassionate care, and commitment to innovation.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 service-card delay-100">
+                        <div class="w-16 h-16 rounded-full bg-blue-50 text-secondary text-3xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-primary mb-4">Our Mission</h3>
+                        <p class="text-gray-600 leading-relaxed">To deliver comprehensive, patient-centered medical care in a safe and supportive environment, empowering patients and fostering well-being through advanced treatments and dedicated service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] text-gray-300 pt-16 pb-8 border-t-4 border-secondary">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-plus text-xl"></i>
+                        </div>
+                        <span class="font-heading font-bold text-2xl text-white">Divyaansh</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Advanced Healthcare You Can Trust. We are committed to providing the highest quality patient care using modern technology and medical expertise.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-0.5 after:bg-secondary">Quick Links</h4>
+                    <ul class="space-y-3 font-medium">
+                        <li><a href="index.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Home</a></li>
+                        <li><a href="services.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Services</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Contact Us</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-0.5 after:bg-secondary">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-map-location-dot mt-1 mr-3 text-secondary text-lg"></i>
+                            <span class="text-sm">D.No, 1, Vayushakthi Nagar,<br>Dammaiguda, Nagaram,<br>Secunderabad, Telangana 500083</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mt-0.5 mr-3 text-secondary text-lg"></i>
+                            <span><a href="tel:09885634512" class="hover:text-white transition-colors">098856 34512</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mt-0.5 mr-3 text-secondary text-lg"></i>
+                            <span><a href="mailto:info@divyaanshhospital.com" class="hover:text-white transition-colors">info@divyaanshhospital.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Map -->
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-0.5 after:bg-secondary">Location Marker</h4>
+                    <div class="h-40 rounded-lg overflow-hidden bg-gray-800">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3805.2952875151502!2d78.58332151487796!3d17.493392888015383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b8fb3d38c6d%3A0x6739d2c42ab34a!2sRampally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1650392301053!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center text-sm md:flex md:justify-between md:items-center">
+                <p>&copy; 2026 Divyaansh Hospital . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Floating Actions -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <a href="tel:09885634512" class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl shadow-xl floating-btn relative group">
+            <i class="fa-solid fa-phone"></i>
+            <span class="absolute right-16 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Call Now</span>
+        </a>
+        <a href="https://wa.me/919885634512" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-xl floating-btn relative group">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="absolute right-16 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">WhatsApp Us</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Divyaansh Hospital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Open Sans"', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1e3a8a',
+                        secondary: '#3b82f6',
+                        accent: '#ef4444',
+                        light: '#f8fafc',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-sans text-gray-800 bg-light flex flex-col min-h-screen">
+    
+    <!-- Top Bar -->
+    <div class="bg-primary text-white text-sm py-2 px-4">
+        <!-- Exact same Top Bar as index -->
+        <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center">
+            <div class="flex items-center space-x-2 text-gray-200">
+                <i class="fa-solid fa-location-dot text-secondary"></i>
+                <span>Rampally, Hyderabad</span>
+            </div>
+            <div class="flex items-center space-x-6 mt-2 sm:mt-0 text-gray-200">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-phone text-secondary"></i>
+                    <a href="tel:9876543210" class="hover:text-white transition-colors">9876543210</a>
+                </div>
+                <div class="flex space-x-3 border-l border-gray-500 pl-6">
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-secondary transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="bg-primary w-10 h-10 rounded-full flex items-center justify-center text-white">
+                    <i class="fa-solid fa-plus text-xl"></i>
+                </div>
+                <span class="font-heading font-bold text-2xl text-primary">Divyaansh<span class="text-secondary font-normal"> Hospital</span></span>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-6 lg:space-x-8 font-heading font-medium text-gray-700">
+                <a href="index.html" class="hover:text-primary transition-colors">Home</a>
+                <a href="services.html" class="text-primary border-b-2 border-primary pb-1">Services</a>
+                <a href="about.html" class="hover:text-primary transition-colors">About Us</a>
+                <a href="contact.html" class="hover:text-primary transition-colors">Contact</a>
+                <a href="tel:9876543210" class="bg-accent hover:bg-red-700 text-white px-6 py-2.5 rounded-full shadow-md transition-all duration-300 flex items-center transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-phone-volume mr-2 animate-pulse"></i>Emergency
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-primary focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden absolute left-0 right-0 top-full bg-white shadow-xl border-t border-gray-100 flex-col px-6 py-6 space-y-4 text-xl font-heading z-40">
+            <a href="index.html" class="text-gray-700 hover:text-primary border-b pb-2">Home</a>
+            <a href="services.html" class="text-primary font-semibold border-b pb-2">Services</a>
+            <a href="about.html" class="text-gray-700 hover:text-primary border-b pb-2">About Us</a>
+            <a href="contact.html" class="text-gray-700 hover:text-primary border-b pb-2">Contact</a>
+            <a href="tel:9876543210" class="bg-accent text-white px-6 py-3 rounded-full text-center mt-2 flex justify-center items-center">
+                <i class="fa-solid fa-phone-volume mr-2"></i>Emergency Call
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Page Header -->
+        <div class="bg-primary pt-20 pb-24 relative overflow-hidden">
+            <div class="absolute inset-0 bg-blue-900/80 z-10"></div>
+            <img src="https://images.unsplash.com/photo-1538108149393-cebb47ac17d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Services" class="absolute inset-0 w-full h-full object-cover z-0">
+            <div class="container mx-auto px-4 relative z-20 text-center animate-fade-in-up">
+                <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Our Medical Services</h1>
+                <div class="flex items-center justify-center space-x-2 text-blue-200">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <span><i class="fa-solid fa-chevron-right text-xs"></i></span>
+                    <span class="text-white">Services</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- All Services -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 1. General Medicine -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-stethoscope"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">General Medicine</h4>
+                        <p class="text-gray-500 text-sm mb-4">Comprehensive care for adults, focusing on the diagnosis and treatment of various non-surgical conditions, fevers, and chronic illnesses.</p>
+                    </div>
+
+                    <!-- 2. Gynaecology & Infertility -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-100">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-person-pregnant"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">Gynaecology & Infertility</h4>
+                        <p class="text-gray-500 text-sm mb-4">Expert care in women's health, from adolescence to menopause, including high-risk pregnancies and advanced infertility treatments.</p>
+                    </div>
+
+                    <!-- 3. Orthopedic -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-200">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-bone"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">Orthopedic</h4>
+                        <p class="text-gray-500 text-sm mb-4">Specialized diagnosis and treatment of bone, joint, ligament, tendon injuries, trauma care, and precision joint replacements.</p>
+                    </div>
+
+                    <!-- 4. ENT -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-300">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-ear-listen"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">ENT</h4>
+                        <p class="text-gray-500 text-sm mb-4">State-of-the-art medical and surgical care for patients with diseases and disorders of the ear, nose, throat, and related structures.</p>
+                    </div>
+
+                    <!-- 5. Dermatology -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-hand-dots"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">Dermatology</h4>
+                        <p class="text-gray-500 text-sm mb-4">Diagnosis and treatment of skin, hair, and nail problems, along with cosmetic dermatology services for enhanced well-being.</p>
+                    </div>
+
+                    <!-- 6. Neurology -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-100">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">Neurology</h4>
+                        <p class="text-gray-500 text-sm mb-4">Advanced care for disorders of the nervous system, including the brain, spinal cord, nerves, and muscles using the latest diagnostic tools.</p>
+                    </div>
+
+                    <!-- 7. URO & Nephrology -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-200">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-kidneys"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">URO & Nephrology</h4>
+                        <p class="text-gray-500 text-sm mb-4">Comprehensive care for urinary tract conditions and kidney diseases, including dialysis and minimally invasive surgeries.</p>
+                    </div>
+
+                    <!-- 8. Cardiology -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-300">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">Cardiology</h4>
+                        <p class="text-gray-500 text-sm mb-4">World-class heart care offering diagnosis, medical management, and interventional procedures for various cardiovascular conditions.</p>
+                    </div>
+
+                    <!-- 9. Gastroenterology -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-stomach"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">Gastroenterology</h4>
+                        <p class="text-gray-500 text-sm mb-4">Management of digestive system disorders, equipped with advanced endoscopy and colonoscopy facilities.</p>
+                    </div>
+
+                    <!-- 10. General Surgery -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-100">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-scalpel"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">General Surgery</h4>
+                        <p class="text-gray-500 text-sm mb-4">A wide range of surgical procedures, from routine appendectomies to complex abdominal surgeries, with options for laparoscopy.</p>
+                    </div>
+
+                    <!-- 11. Pediatrics -->
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 service-card relative overflow-hidden group delay-200">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center text-primary bg-blue-50 text-2xl mb-6 transition-colors duration-300 service-icon-bg">
+                            <i class="fa-solid fa-baby"></i>
+                        </div>
+                        <h4 class="font-heading text-xl font-semibold mb-3 text-gray-800">Pediatrics</h4>
+                        <p class="text-gray-500 text-sm mb-4">Dedicated medical care for infants, children, and adolescents, providing routine check-ups, vaccinations, and specialized pediatric treatment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#111827] text-gray-300 pt-16 pb-8 border-t-4 border-secondary">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="bg-white w-10 h-10 rounded-full flex items-center justify-center text-primary">
+                            <i class="fa-solid fa-plus text-xl"></i>
+                        </div>
+                        <span class="font-heading font-bold text-2xl text-white">Divyaansh</span>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Advanced Healthcare You Can Trust. We are committed to providing the highest quality patient care using modern technology and medical expertise.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-secondary hover:text-white transition-all"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-0.5 after:bg-secondary">Quick Links</h4>
+                    <ul class="space-y-3 font-medium">
+                        <li><a href="index.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Home</a></li>
+                        <li><a href="services.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Services</a></li>
+                        <li><a href="about.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Contact Us</a></li>
+                        <li><a href="#" class="hover:text-secondary transition-colors flex items-center"><i class="fa-solid fa-chevron-right text-xs mr-2 text-secondary"></i> Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-0.5 after:bg-secondary">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-map-location-dot mt-1 mr-3 text-secondary text-lg"></i>
+                            <span class="text-sm">D.No, 1, Vayushakthi Nagar,<br>Dammaiguda, Nagaram,<br>Secunderabad, Telangana 500083</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone mt-0.5 mr-3 text-secondary text-lg"></i>
+                            <span><a href="tel:09885634512" class="hover:text-white transition-colors">098856 34512</a></span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope mt-0.5 mr-3 text-secondary text-lg"></i>
+                            <span><a href="mailto:info@divyaanshhospital.com" class="hover:text-white transition-colors">info@divyaanshhospital.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Map -->
+                <div>
+                    <h4 class="text-white font-heading font-semibold text-lg mb-6 relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-12 after:h-0.5 after:bg-secondary">Location Marker</h4>
+                    <div class="h-40 rounded-lg overflow-hidden bg-gray-800">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3805.2952875151502!2d78.58332151487796!3d17.493392888015383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b8fb3d38c6d%3A0x6739d2c42ab34a!2sRampally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1650392301053!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 mt-8 text-center text-sm md:flex md:justify-between md:items-center">
+                <p>&copy; 2026 Divyaansh Hospital . All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Floating Actions -->
+    <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
+        <a href="tel:09885634512" class="w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center text-2xl shadow-xl floating-btn relative group">
+            <i class="fa-solid fa-phone"></i>
+            <span class="absolute right-16 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Call Now</span>
+        </a>
+        <a href="https://wa.me/919885634512" target="_blank" class="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center text-3xl shadow-xl floating-btn relative group">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="absolute right-16 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">WhatsApp Us</span>
+        </a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
